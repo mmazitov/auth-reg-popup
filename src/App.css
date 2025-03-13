@@ -1,0 +1,50 @@
+html,
+body {
+	height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.form-container {
+	transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+}
+
+	.active {
+		.toggle-box:before {
+			top: 65%;
+		}
+		.toggle-text {
+			top: 65%;
+		}
+		.form-container {
+			bottom: 30%;
+			visibility: hidden;
+			&.register {
+				visibility: visible;
+			}
+		}
+	}
+
+
+
+@media (width >= 64rem) {
+	.active {
+		.toggle-box:before {
+			left: 50%;
+			top: inherit
+		}
+		.toggle-text {
+			left: 50%;
+			top: inherit
+		}
+		.form-container {
+			right: 50%;
+			bottom: inherit;
+			visibility: hidden;
+			&.register {
+				visibility: visible;
+			}
+		}
+	}
+}
